@@ -24,7 +24,8 @@ public class MarkdownParseTest {
         Path filePath = Path.of("C:/Users/pyroh/OneDrive/Documents/GitHub/markdown-parser1/test2.md");
         String contents = Files.readString(filePath);
         ArrayList<String> links = new MarkdownParse().getLinks(contents);
-        assertEquals(null,links.get(0));
+        ArrayList<String> linkEmpty = new ArrayList<>();
+        assertEquals(linkEmpty,links);
         
     }
 
@@ -32,7 +33,8 @@ public class MarkdownParseTest {
         Path filePath = Path.of("C:/Users/pyroh/OneDrive/Documents/GitHub/markdown-parser1/test3.md");
         String contents = Files.readString(filePath);
         ArrayList<String> links = new MarkdownParse().getLinks(contents);
-        assertEquals(null,links.get(0));
+        ArrayList<String> linkEmpty = new ArrayList<>();
+        assertEquals(linkEmpty,links);
         
     }
 
@@ -40,7 +42,8 @@ public class MarkdownParseTest {
         Path filePath = Path.of("C:/Users/pyroh/OneDrive/Documents/GitHub/markdown-parser1/test4.md");
         String contents = Files.readString(filePath);
         ArrayList<String> links = new MarkdownParse().getLinks(contents);
-        assertEquals(null,links.get(0));
+        ArrayList<String> linkEmpty = new ArrayList<>();
+        assertEquals(linkEmpty,links);
         
     }
 }
