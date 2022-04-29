@@ -49,10 +49,10 @@ public class MarkdownParseTest {
 
     @Test
     public void getLinksTest5() throws IOException{
-        Path filePath = Path.of("test-file.md");
+        Path filePath = Path.of("test5.md");
         String contents = Files.readString(filePath);
         ArrayList<String> links = new MarkdownParse().getLinks(contents);
-        assertEquals("",links.get(1));
+        assertEquals("a",links.get(0));
         
     }
 }
