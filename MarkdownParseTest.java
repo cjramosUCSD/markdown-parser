@@ -21,7 +21,7 @@ public class MarkdownParseTest {
     }
     @Test
     public void getLinksTest2() throws IOException{
-        Path filePath = Path.of("C:/Users/pyroh/OneDrive/Documents/GitHub/markdown-parser1/test2.md");
+        Path filePath = Path.of("test2.md");
         String contents = Files.readString(filePath);
         ArrayList<String> links = new MarkdownParse().getLinks(contents);
         ArrayList<String> linkEmpty = new ArrayList<>();
