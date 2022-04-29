@@ -19,7 +19,7 @@ public class MarkdownParseTest {
         assertEquals("some-thing.html",links.get(1));
         
     }
-
+    @Test
     public void getLinksTest2() throws IOException{
         Path filePath = Path.of("C:/Users/pyroh/OneDrive/Documents/GitHub/markdown-parser1/test2.md");
         String contents = Files.readString(filePath);
@@ -28,7 +28,7 @@ public class MarkdownParseTest {
         assertEquals(linkEmpty,links);
         
     }
-
+    @Test
     public void getLinksTest3() throws IOException{
         Path filePath = Path.of("C:/Users/pyroh/OneDrive/Documents/GitHub/markdown-parser1/test3.md");
         String contents = Files.readString(filePath);
@@ -37,7 +37,7 @@ public class MarkdownParseTest {
         assertEquals(linkEmpty,links);
         
     }
-
+    @Test
     public void getLinksTest4() throws IOException{
         Path filePath = Path.of("C:/Users/pyroh/OneDrive/Documents/GitHub/markdown-parser1/test4.md");
         String contents = Files.readString(filePath);
