@@ -53,7 +53,7 @@ public class MarkdownParseTest {
         String contents = Files.readString(filePath);
         ArrayList<String> links = new MarkdownParse().getLinks(contents);
         ArrayList<String> linkEmpty = new ArrayList<>();
-        assertEquals(linkEmpty,links);
+        assertEquals("a",links.get(0));
         
     }
 }
