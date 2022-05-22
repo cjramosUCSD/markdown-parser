@@ -47,7 +47,7 @@ public class MarkdownParseTest {
         
     }
 
-    @Test
+    /*@Test
     public void getLinksTest5() throws IOException{
         Path filePath = Path.of("test5.md");
         String contents = Files.readString(filePath);
@@ -55,6 +55,37 @@ public class MarkdownParseTest {
         ArrayList<String> linkEmpty = new ArrayList<>();
         assertEquals("a",links.get(0));
         
+    }*/
+    
+    @Test
+    public void labReport1() throws IOException{
+        Path filePath = Path.of("LabReportTest1.md");
+        String contents = Files.readString(filePath);
+        ArrayList<String> links = new MarkdownParse().getLinks(contents);
+        
+        assertEquals(List.of("%60google.com", "google.com", "ucsd.edu"),links);
+        
     }
+
+    @Test
+    public void labReport2() throws IOException{
+        Path filePath = Path.of("LabReportTest2.md");
+        String contents = Files.readString(filePath);
+        ArrayList<String> links = new MarkdownParse().getLinks(contents);
+        assertEquals(List.of("a.com", "a.com(())", "example.com"),links);
+        
+    }
+
+    @Test
+    public void labReport3() throws IOException{
+        Path filePath = Path.of("LabReportTest3.md");
+        String contents = Files.readString(filePath);
+        ArrayList<String> links = new MarkdownParse().getLinks(contents);
+        assertEquals(List.of("https://sites.google.com/eng.ucsd.edu/cse-15l-spring-2022/schedule")
+        ,links);
+        
+    }
+
+
 }
 
